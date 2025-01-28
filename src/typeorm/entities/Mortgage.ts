@@ -11,6 +11,6 @@ export class Mortgage {
     @Column('float')
     interestRate: number;
 
-    // @Column()
-    // endDate: Date;
+    @Column({ type: 'date' })
+    endDate: Date;
 }
