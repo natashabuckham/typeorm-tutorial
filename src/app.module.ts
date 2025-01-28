@@ -10,7 +10,7 @@ import { MortgagesModule } from './mortgages/mortgages.module';
     type: 'mysql',
     host: ,
     port: ,
-    username: ',
+    username: ,
     password: ,
     database: ,
     entities: [Mortgage],

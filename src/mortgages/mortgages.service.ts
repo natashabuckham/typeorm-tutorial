@@ -16,7 +16,7 @@ export class MortgagesService {
     return this.mortgageRepository.save(newMortgage);
   }
 
-  // removeMortgage(id: number) {
-  //   return `This action removes a #${id} mortgage`;
-  // }
+  deleteMortgage(id: number) {
+    return this.mortgageRepository.delete({ id });
+  }
 }
