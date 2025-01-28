@@ -3,3 +3,9 @@ export type CreateMortgageParams = {
     interestRate: number;
     endDate: Date;
 }
+
+// export type UpdateMortgageParams = {
+//     loanAmount: number;
+//     interestRate: number;
+//     endDate: Date;
+// }
