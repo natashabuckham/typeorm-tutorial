@@ -5,7 +5,7 @@ export class Mortgage {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column('decimal', { precision: 10, scale: 2 })
+    @Column('decimal', { scale: 2 })
     loanAmount: number;
 
     @Column('float')
