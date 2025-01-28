@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity({ name: 'mortgages' }) // can specify the name of the table otherwise TypeORM will use the name of the class 'Mortgage'
+@Entity({ name: 'mortgages' })
 export class Mortgage {
     @PrimaryGeneratedColumn()
     id: number;
