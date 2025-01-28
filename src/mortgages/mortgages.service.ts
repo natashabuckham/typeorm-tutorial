@@ -8,8 +8,13 @@ import { Repository } from 'typeorm';
 export class MortgagesService {
 
   constructor(
-    @InjectRepository(Mortgage) private mortgageRepository: Repository<Mortgage>,
+    @InjectRepository(Mortgage) 
+    private mortgageRepository: Repository<Mortgage>,
   ) {}
+
+  async findOneById(id: number) {
+    return this.mortgageRepository.findOne({ where: { id } })
+  }
 
   createMortgage(mortgageDetails: CreateMortgageParams) {
     const newMortgage = this.mortgageRepository.create({ ...mortgageDetails })
