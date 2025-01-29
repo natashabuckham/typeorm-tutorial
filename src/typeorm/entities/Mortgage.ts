@@ -8,7 +8,7 @@ export class Mortgage {
     @Column('decimal', { scale: 2 })
     loanAmount: number;
 
-    @Column('float')
+    @Column('decimal', { scale: 4, precision: 10 })
     interestRate: number;
 
     @Column({ type: 'date' })
