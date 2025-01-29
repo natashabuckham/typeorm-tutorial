@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { MortgagesModule } from './mortgages/mortgages.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { BorrowersModule } from './borrowers/borrowers.module';
 
 @Module({
   imports: [
@@ -24,7 +25,9 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         autoLoadEntities: true,
       })
     }), 
-    MortgagesModule],
+    MortgagesModule,
+    BorrowersModule
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

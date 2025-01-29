@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Borrower } from "./Borrower";
 
 @Entity({ name: 'mortgages' })
 export class Mortgage {
@@ -13,4 +14,8 @@ export class Mortgage {
 
     @Column({ type: 'date' })
     endDate: Date;
+
+    @OneToOne(() => Borrower)
+    @JoinColumn()
+    borrower: Borrower;
 }
