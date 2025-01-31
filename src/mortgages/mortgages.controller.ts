@@ -2,6 +2,7 @@ import { Controller, Post, Delete, Body, ParseIntPipe, Param, NotFoundException,
 import { MortgagesService } from './mortgages.service';
 import { CreateMortgageDto } from './dtos/CreateMortgage.dto';
 import { UpdateMortgageDto } from './dtos/UpdateMortgage.dto';
+import { CreateMortgageBorrowerDto } from './dtos/CreateMortgageBorrower.dto';
 
 @Controller('mortgages')
 export class MortgagesController {
@@ -33,5 +34,11 @@ export class MortgagesController {
       throw new NotFoundException(`Entity with ID ${id} not found`)
     }
     await this.mortgagesService.deleteMortgage(id);
+  }
+
+  @Post(':id/borrowers')
+  createMortgageBorrower(@Param('id', ParseIntPipe) id: number,
+  @Body() createMortgageBorrowerDto: CreateMortgageBorrowerDto) {
+    return this.mortgagesService.createMortgageBorrower(id, createMortgageBorrowerDto)
   }
 }

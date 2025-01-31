@@ -5,15 +5,15 @@ export class Borrower {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @Column({ default: "Generic Inc" })
     companyName: string;
 
-    @Column()
+    @Column({ default: "Suzy" })
     contactFirstName: string;
 
-    @Column()
+    @Column({ default: "Jones" })
     contactLastName: string;
 
-    @Column()
+    @Column({ default: "Manufacturing" })
     industry: string;
 }

@@ -15,7 +15,7 @@ export class Mortgage {
     @Column({ type: 'date' })
     endDate: Date;
 
-    @OneToOne(() => Borrower)
+    @OneToOne(() => Borrower, { cascade: true })
     @JoinColumn()
     borrower: Borrower;
 }

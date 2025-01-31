@@ -9,3 +9,10 @@ export type CreateMortgageParams = {
 //     interestRate: number;
 //     endDate: Date;
 // }
+
+export type CreateMortgageBorrowerParams = {
+    companyName: string;
+    contactFirstName: string;
+    contactLastName: string;
+    industry: string;
+}
